@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресторан "У дома"</title>
+    <link type="image/x-icon" href="img/logo.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="style.css"> 
+    <script type="text/javascript" src="app.js" defer=""></script>
+
+</head>
+<body>
+
+    <div id="captchaModal" class="modal">
+        <div class="modal-content">
+            <h2>Проверка на робота</h2>
+            <div id="captchaText">Генерируемый текст</div>
+            <input type="text" id="captchaInput" placeholder="Введите текст с картинки">
+            <button id="refreshCaptcha">Обновить</button>
+            <button id="verifyCaptcha">Проверить</button>
+            <p id="captchaMessage"></p>
+        </div>
+    </div>
+
+    <header>
+
+        <div class="photo_2024-12-11_00-54-44">
+            <img src="">
+        </div>
+
+        <h1 class="site-title">Ресторан "У дома"</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#section1">О нас</a></li>
+                <li><a href="#section2">Галерея</a></li>
+                <li><a href="#section3">Забронировать</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="i (1).jpg" height="100px" onclick="openFullscreenImage(this)">
+            <img src="i (2).jpg" height="100px" onclick="openFullscreenImage(this)">
+            <img src="i (3).jpg" height="100px" onclick="openFullscreenImage(this)">
+            <img src="i (4).jpg" height="100px" onclick="openFullscreenImage(this)">
+        </div>
+        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+        <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
+    </div>
+
+    <section id="section1">
+
+        <div class="text_o_nas">
+            <h1>О нас:</h1>
+            <p>Формат заведения — домашнее кафе, где интерьер похож на квартиру лучшего друга, в меню блюда домашней кухни, а цены демократичны. Атмосфера должна быть такой, чтобы, едва переступив порог, гости почувствовали себя как дома, расслабились, попивая травяной чай и листая книгу. Тёплые тона, приглушённый свет, удобные кресла и мягкие диваны, горшки с цветами и фотографии на стенах — всё это можно расположить в одной зоне, рассчитанной на приятное общение или уединение. Кухня должна быть открытой, хотя бы частично. Тогда у гостей будет создаваться ощущение, что они находятся с поварами в одной комнате. В меню полноценный домашний обед: борщ с пампушками, гречка с котлетами, салат «Мимоза», кисель и кексы на десерт. Напитки могут быть представлены квасом, морсами, всевозможными чаями и пивом.
+        </div>
+
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-1c5c3d38-d531-4d2e-bfb6-2fa411e8f53e"></div>
+
+    </section>
+
+
+    <section id="section2">
+
+        <div class="column-container">
+
+            <div class="column">
+                <h2></h2>
+                <img src="i.jpg" class="pic" onclick="openFullscreenImage(this)">
+                <p>В нашем заведении вы сможете отлично провести время с друзьями или найти новые знакомства.</p>
+            </div>
+
+            <div class="column">
+                <h2></h2>
+                <img src="i1.jpg" class="pic" onclick="openFullscreenImage(this)">
+                <p>Красивый интерьев.</p>
+            </div>
+
+            <div class="column">
+                <h2></h2>
+                <img src="i3.jpg" class="pic" onclick="openFullscreenImage(this)">
+                <p>Живая музыка.</p>
+            </div>
+
+        </div>
+
+        <div class="column-container">
+
+            <div class="column">
+                <h2></h2>
+                <img src="i2.jpg" class="pic" onclick="openFullscreenImage(this)">
+                <p>
+                    Быстрое обслуживание.
+                </p>
+            </div>
+
+            <div class="column">
+                <h2></h2>
+                <img src="i4.jpg" class="pic" onclick="openFullscreenImage(this)">
+                <p>Разнообразное меню. </p>
+            </div>
+
+            <div class="column">
+                <h2></h2>
+                <img src="i5.jpg" class="pic" onclick="openFullscreenImage(this)">
+                <p>Акции и скидки.</p>
+            </div>
+
+        </div>
+
+        <div id="fullscreen-container" class="hidden">
+            <span class="close-button" onclick="closeFullscreenImage()">&times;</span>
+            <img src="" alt="Полноэкранное изображение" id="fullscreen-image">
+        </div>
+
+    </section>
+
+    <section id="section3">
+
+        <form class="obratnuj-zvonok" autocomplete="off" /*action ='email.php' * / method='post'>
+            <div class="form-zvonok">
+
+                <div>
+                    <label>Имя <span>*</span></label>
+                    <input type='text' name='name' required>
+                </div>
+                <div>
+                    <label>Номер телефона (с кодом) <span>*</span></label>
+                    <input type='text' name='phone' required>
+                </div>
+                <div>
+                    <label>Сообщение</label>
+                    <input type='text' name='message'>
+                </div>
+
+                <div>
+                    <label>Введите текст с картинки<span>*</span></label>
+                    <input type='text' name='capcha' required>
+                </div>
+                <img src="photo_2024-12-11_00-54-17.jpg" class="pic">
+                <input class="bot-send-mail" type='submit' value='Послать заявку'>
+            </div>
+        </form>
+
+    </section>
+
+    <button id="scrollToTopButton">Вверх</button>
+
+
+</body>
+
+<footer style="width: 100%;">
+
+  <div class="social-icons">
+    <a href="https://web.telegram.org/k/#@Looz1k" class="social-icon"><img src="photo_2024-12-11_00-54-50.jpg" alt="Tg"></a>
+    <a href="https://vk.com/looz123" class="social-icon"><img src="photo_2024-12-11_00-54-52.jpg" alt="Vk"></a>
+  </div>
+  
+</footer>
+
+
+</html>
